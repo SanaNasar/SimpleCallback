@@ -24,3 +24,40 @@ add(2,3, function(){
 });
 //Result will return 5 and Bam!
 
+
+// Step 3: 
+
+// Clean Up the Callback
+
+function add(first, second, callback) {
+  console.log(first+second);
+  //Add and if statement so that the callback is only called if it there
+  if (callback) {
+    callback();
+  }
+}
+
+//Create a fuction for logBam to pass into the callback argument
+function logBam() {
+  console.log('Bam!');
+}
+
+add(2,3, logBam);
+
+
+
+
+
+//PS
+
+//Relating to jQuery
+
+function greatClick() {
+  //Do Something Great
+}
+
+$('#exampleDivhere').click(greatClick);
+
+
+
+
